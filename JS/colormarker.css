@@ -1,0 +1,80 @@
+h1 {
+    text-align: center;
+}
+
+.marker {
+    /* background-color: red; it is removed */
+    width: 200px;
+    height: 25px;
+    margin: 10px auto;
+}
+
+.red {
+    /*To create the first secondary color, yellow,
+     update the rgb function in the
+     .one CSS rule to combine pure red and pure green.
+    background-color: rgb(255,0,0);*/
+    /*Now that you're familiar with secondary colors, you'll learn how to create tertiary colors.
+    Tertiary colors are created by combining a primary with a
+    nearby secondary color
+    background-color: rgb(255,255,0);*/
+    /* background-color: rgb(255,0,0); */
+    /*color Transition by using linearGradient()*/
+    /* background: linear-gradient(90deg,rgb(255,0,0)75%,rgb(0,255,0),rgb(0,0,255)); */
+    /* background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113)50%, rgb(162, 27, 27)100%);*/
+     background: linear-gradient( rgb(122, 74, 14) , rgb(245, 62, 113), rgb(162, 27, 27));
+     box-shadow: 0 0 20px 0 rgba(83,14,14,0.8);
+}
+
+.green {
+    /* background-color: rgb(0,255,0); too make some darkness*/
+    /* background-color: rgb(0,127,0); too combine both colors
+    settig back the value 255*/
+    /*To create the next secondary color, cyan, update the rgb function in the .two CSS rule to combine pure green and pure blue.
+    background-color: rgb(0,255,0);*/
+    /*To create the tertiary color spring green,
+    combine cyan with green. Update the rgb function in the
+    .two CSS rule so that green is at the max value, and set blue to 127
+    background-color: rgb(0,255,255);*/
+    /* background-color: rgb(0,0,0); */
+    /*Green COlor by using hexa decimal code (<#A-F  to 1-9)*/
+    /*If a blurRadius value isn't included, it defaults to 0 and produces sharp edges. 
+    The higher the value of blurRadius, the greater the blurring effect is.*/
+    background: linear-gradient( #55680D, #71F53E, #116C31);
+    box-shadow: (0 0 20px 0 #3B7E20CC);
+}
+
+.blue {
+    /*To create the final secondary color, magenta,
+     update the rgb function in the
+     .three CSS rule to combine pure blue and pure red.
+    background-color: rgb(0,0,255);*/
+    background: linear-gradient(hsl(186, 76%, 16%), hsl(223, 90%, 60%),hsl(240, 56%, 42%));
+    box-shadow:0 0 20px 0 hsla(223,59%,31%,0.8);
+    /* 5px = Spread radius value*/
+}
+
+.container {
+    /* For combinig all colors we have to values of RGB function*/
+    background: rgb(255, 255, 255);
+    padding: 10px 0;
+}
+.sleeve{
+    width: 110px;
+    height:25px;
+    background-color: rgba(255,255, 255, 0.5);
+    border-left:10px double rgba(0,0,0,75%);
+    /* opacity: 0.5; */
+}
+.cap{
+    width:60px;
+    height:25px
+}
+/* looks like your sleeve disappeared, but don't worry -- it's still there. What happened is that your new cap div is taking up the entire width of the marker, and is pushing the sleeve down to the next line.
+
+This is because the default display property for div elements is block. So when two block elements are next to each other, they stack like actual blocks. For example, your marker elements are all stacked on top of each other.
+
+To position two div elements on the same line, set their display properties to inline-block.*/
+.cap , .sleeve{
+    display:inline-block;
+  }
