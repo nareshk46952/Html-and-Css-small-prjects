@@ -1,0 +1,9 @@
+body {
+ background-color: #f5f5ab;
+}
+h1,p{
+    text-align: center;
+}
+input,label {
+    display: block;
+}
